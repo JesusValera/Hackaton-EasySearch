@@ -18,3 +18,5 @@ Route::get('/hotels', 'HotelController@index');
 Route::get('/trains', 'TrainController@index');
 
 Route::get('/manage', 'ManageController@index');
+
+Route::get('/manage/ticket/{ticketcode}', 'ManageController@ticket');

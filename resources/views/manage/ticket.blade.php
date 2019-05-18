@@ -6,7 +6,7 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h1>Locate your ticket</h1>
+                        <h1>This is your ticket</h1>
                     </div>
                 </div>
                 <div class="row booking_container">
@@ -14,19 +14,20 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label class="">Booking reference</label>
-                                    <input type="text" class="form-control" id="booking_reference">
+                                    <label class="" style="font-weight: bold;">Booking reference: </label>
+                                    <?php echo $ticket['code'];?>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label class="">Last name</label>
-                                    <input type="text" class="form-control" id="last_name">
+                                    <label class="" style="font-weight: bold;">Last name: </label>
+                                    <?php echo $ticket['name'];?>
                                 </div>
                             </div>
-                            <div class="col-md-4 booking_submit">
+                            <div class="col-md-4">
                                 <div class="form-group">
-                                    <button class="btn btn-warning" onclick="easysearch.searchTicket();">VIEW BOOKING</button>
+                                    <label class="" style="font-weight: bold;">Date: </label>
+                                    <?php echo $ticket['date'];?>
                                 </div>
                             </div>
                         </div>

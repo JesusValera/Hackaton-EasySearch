@@ -6,5 +6,8 @@ var easysearch = {
         //Select the option clicked
         $('#o_idtrain_' + idtrain).addClass('selected');
         $('#o_idtrain_' + idtrain + '_sit_' + idsit).addClass('selected');
+    },
+    searchTicket: function(booking_reference) {
+        location.href = 'http://easysearch.iberstation.com/manage/ticket/HAX728KSJ';
     }
 }
