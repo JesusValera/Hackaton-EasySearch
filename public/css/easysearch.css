@@ -11,9 +11,18 @@
     padding: 30px;
     border: 1px solid #000;
     margin-bottom: 20px;
-    cursor: pointer;
 }
 
 .trainoption.selected {
     background: #c7f5c1;
+}
+
+.trainoptionsit {
+    cursor: pointer;
+    color: #a2a2a2;
+}
+
+.trainoptionsit.selected {
+    font-weight: bold;
+    color: #000
 }
