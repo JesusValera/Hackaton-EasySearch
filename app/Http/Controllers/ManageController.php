@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Ticket;
+use App\User;
+use App\Train;
 use Illuminate\Http\Request;
 
 class ManageController extends Controller
@@ -13,9 +16,13 @@ class ManageController extends Controller
 
     public function ticket($ticketcode)
     {
-        $ticket = array('code' => 'HAX728KSJ', 'name' => 'John Smith', 'date' => '2019-05-20 14:00:00');
+        $ticket = Ticket::where('localizador', $ticketcode)->get();
+        $usuario = User::where('id', $ticket[0]->idusuario)->get();
+        $train = Train::where('id', $ticket[0]->idtren)->get();
+
+        $ticketView = array('localizador' => $ticket[0]->localizador, 'name' => $usuario[0]->nombre, 'date' => $train[0]->horasalida);
         return view('manage.ticket', [
-            'ticket' => $ticket
+            'ticket' => $ticketView
         ]);
     }
 

@@ -15,7 +15,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="" style="font-weight: bold;">Booking reference: </label>
-                                    <?php echo $ticket['code'];?>
+                                    <?php echo $ticket['localizador'];?>
                                 </div>
                             </div>
                             <div class="col-md-4">
