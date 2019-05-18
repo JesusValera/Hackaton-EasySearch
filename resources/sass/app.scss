@@ -16,18 +16,8 @@ html, body {
   margin: 0;
 }
 
-.full-height {
-  height: 100vh;
-}
-
-.flex-center {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.position-ref {
-  position: relative;
+.container {
+  margin-top: 60px;
 }
 
 .top-right {
