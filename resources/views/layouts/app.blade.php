@@ -37,6 +37,20 @@
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
             </li>
+
+            @if (Route::has('login'))
+                <li class="nav-item">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                </li>
+            @endif
         </ul>
     </div>
 </nav>
