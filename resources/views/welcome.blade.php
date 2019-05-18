@@ -1,45 +1,63 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex-center position-ref full-height">
-
+    <div class="container">
         <div class="content">
-            <div class="row">
-                <ul>
-                    @foreach($cities as $city)
-                        <li>{{ $city->name }}</li>
-                    @endforeach
-                </ul>
-            </div>
-
             <div class="title m-b-md">
                 EasySearch
             </div>
-
-
             <div class="links">
                 <div>
-                    <div> <!-- Buscar trenes -->
-                        <h3> Train </h3>
-                        <label> FROM </label> <!-- ciudad origen-->
-                        <input id="ciudad_origen">
-                        <label> TO </label>  <!-- ciudad destino-->
-                        <input id="ciudad_destino">
-                        <label> WHEN </label>
-                        <input>
-                        <button> SEARCH</button>
-                    </div>
+                <h3> Train </h3>
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                                    <label> FROM </label> <!-- ciudad origen-->
+                                    <select id="ciudad_origen" class="form-control">
+                                        @foreach($cities as $city)
+                                            <option value="{{ $city-> id }}">{{ $city-> nombre }}</option>
+                                        @endforeach
+                                    </select>
+                        </div>
+                        <div class="form-group" >
+                                    <label> TO </label>  <!-- ciudad destino-->
+                                    <select class="form-control" id="ciudad_destino">
+                                        <ul>
+                                            @foreach($cities as $city)
+                                            <option value="{{ $city-> id }}">{{ $city-> nombre }}</option>
+                                            @endforeach
+                                        </ul>
+                                    </select>
+                        </div>
+                        <div class="form-group" >
+                                    <label> WHEN </label>
+                                    <input class="form-control">
+                                
+                                    <button type="submit" class="btn btn-default"> SEARCH</button>
+                        </div>
+                    </form>
 
-                    <div> <!-- Buscar hoteles -->
-                        <h3> Hotel </h3>
-                        <label> CITY </label>
-                        <input id="ciudad">
-                        <label> FROM </label> <!-- fecha inicio-->
-                        <input id="fecha_incio">
-                        <label> TO </label> <!-- fecha fin-->
-                        <input id="fecha_fin">
-                        <button> SEARCH</button>
-                    </div>
+                    <h3> Hotel </h3>
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                                    <label> CITY </label> <!-- ciudad origen-->
+                                    <select id="ciudad_origen" class="form-control">
+                                        @foreach($cities as $city)
+                                            <option value="{{ $city-> id }}">{{ $city-> nombre }}</option>
+                                        @endforeach
+                                    </select>
+                        </div>
+                        <div class="form-group" >
+                                    <label> FROM </label> 
+                                    <input class="form-control" id="fecha_inicio">
+                                    
+                                    </select>
+                        </div>
+                        <div class="form-group" >
+                                    <label> TO </label>
+                                    <input class="form-control" id="fecha_fin">
+                                    <button type="submit" class="btn btn-default"> SEARCH</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
