@@ -15,7 +15,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label class="">Booking reference</label>
-                                    <input type="text" class="form-control" id="booking_reference">
+                                    <input type="text" class="form-control" id="booking_reference" value="HAX728KSJ">
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -26,7 +26,7 @@
                             </div>
                             <div class="col-md-4 booking_submit">
                                 <div class="form-group">
-                                    <button class="btn btn-warning" onclick="easysearch.searchTicket();">VIEW BOOKING</button>
+                                    <button class="btn btn-warning" onclick="easysearch.searchTicket($('#booking_reference').val());">VIEW BOOKING</button>
                                 </div>
                             </div>
                         </div>
