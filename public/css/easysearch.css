@@ -1,0 +1,19 @@
+.trainoptionheader {
+    font-size: 15px;
+    background: #eee;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.trainoption {
+    font-size: 25px;
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.trainoption.selected {
+    background: #c7f5c1;
+}
