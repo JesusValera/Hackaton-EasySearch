@@ -1,4 +1,4 @@
-var easysearch = {
+let easysearch = {
     selectTrain: function(idtrain, idsit) {
         //Remove selected class to all train options
         $("[id^='o_idtrain_']").removeClass('selected');
