@@ -7,7 +7,7 @@
                 <h1>Listado de trenes disponibles:</h1>
             </div>
         </div>
-        <div class="row text-center" style="font-size: 15px; background: #eee; padding: 30px;">
+        <div class="row text-center trainoptionheader">
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-6"></div>
@@ -21,7 +21,8 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="font-size: 25px; background: #ddd; padding: 30px;">
+        <?php // foreach train option {?>
+        <div class="row trainoption" id="o_idtrain_1" onclick="easysearch.selectTrain(1);">
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-6">15:04 -> 18:05</div>
@@ -35,5 +36,7 @@
                 </div>
             </div>
         </div>
+        <?php // end foreach train option {?>
+
     </div>
 @endsection
