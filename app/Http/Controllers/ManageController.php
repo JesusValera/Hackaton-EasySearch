@@ -17,6 +17,9 @@ class ManageController extends Controller
     public function ticket($ticketcode)
     {
         $ticket = Ticket::where('localizador', $ticketcode)->get();
+        if (count($ticket)<1) {
+            return redirect('manage');
+        }
         $usuario = User::where('id', $ticket[0]->idusuario)->get();
         $train = Train::where('id', $ticket[0]->idtren)->get();
 
