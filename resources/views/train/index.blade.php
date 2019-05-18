@@ -22,21 +22,27 @@
             </div>
         </div>
         <?php // foreach train option {?>
-        <div class="row trainoption" id="o_idtrain_1" onclick="easysearch.selectTrain(1);">
+        <div class="row trainoption" id="o_idtrain_1">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-6">15:04 -> 18:05</div>
+                    <div class="col-md-6 trainoptiondesc">15:04 -> 18:05</div>
                     <div class="col-md-6">
                         <div class="row text-center">
-                            <div class="col-md-4">170€</div>
-                            <div class="col-md-4">200€</div>
-                            <div class="col-md-4">210€</div>
+                            <div class="col-md-4 trainoptionsit" id="o_idtrain_1_sit_1" onclick="easysearch.selectTrain(1,1);">170€</div>
+                            <div class="col-md-4 trainoptionsit" id="o_idtrain_1_sit_2" onclick="easysearch.selectTrain(1,2);">200€</div>
+                            <div class="col-md-4 trainoptionsit" id="o_idtrain_1_sit_3" onclick="easysearch.selectTrain(1,3);">210€</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <?php // end foreach train option {?>
+
+        <div class="row">
+            <div class="col-md-12 text-right">
+                <button class="btn btn-success">Comprar</button>
+            </div>
+        </div>
 
     </div>
 @endsection
