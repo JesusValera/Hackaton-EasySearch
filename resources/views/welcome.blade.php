@@ -11,7 +11,7 @@
             <div class="row mt-5 searchcontainer">
                 <div class="col-md-12">
                     <h3> Train </h3>
-                    <form class="" role="form">
+                    <form class="" role="form" action="/trains">
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="form-group">
@@ -51,7 +51,7 @@
             <div class="row mt-5 searchcontainer">
                 <div class="col-md-12">
                     <h3> Hotel </h3>
-                    <form class="" role="form">
+                    <form class="" role="form" action="/hotels">
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="form-group">
