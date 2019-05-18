@@ -16,3 +16,5 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/hotels', 'HotelController@index');
 
 Route::get('/trains', 'TrainController@index');
+
+Route::get('/manage', 'ManageController@index');
