@@ -9,18 +9,18 @@
             <div class="links">
                 <div>
                 <h3> Train </h3>
-                    <form class="form-inline" role="form">
+                    <form class="form-inline" role="form" action="/trains">
                         <div class="form-group">
                                     <label> FROM </label> <!-- ciudad origen-->
-                                    <select id="ciudad_origen" class="form-control">
+                                    <select id="ciudad_origen" class="form-control" name="idorigen">
                                         @foreach($cities as $city)
                                             <option value="{{ $city-> id }}">{{ $city-> nombre }}</option>
                                         @endforeach
                                     </select>
                         </div>
-                        <div class="form-group" >
+                        <div class="form-group">
                                     <label> TO </label>  <!-- ciudad destino-->
-                                    <select class="form-control" id="ciudad_destino">
+                                    <select class="form-control" id="ciudad_destino" name="iddestino">
                                         <ul>
                                             @foreach($cities as $city)
                                             <option value="{{ $city-> id }}">{{ $city-> nombre }}</option>
@@ -47,9 +47,9 @@
                                     </select>
                         </div>
                         <div class="form-group" >
-                                    <label> FROM </label> 
+                                    <label> FROM </label>
                                     <input class="form-control" id="fecha_inicio">
-                                    
+
                                     </select>
                         </div>
                         <div class="form-group" >
