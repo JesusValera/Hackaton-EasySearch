@@ -16,7 +16,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label> FROM </label> <!-- ciudad origen-->
-                                    <select id="ciudad_origen" class="form-control">
+                                    <select id="ciudad_origen" class="form-control" name="idorigen">
                                         @foreach($cities as $city)
                                             <option value="{{ $city-> id }}">{{ $city-> nombre }}</option>
                                         @endforeach
@@ -26,7 +26,7 @@
                             <div class="col-md-3">
                                 <div class="form-group" >
                                     <label> TO </label>  <!-- ciudad destino-->
-                                    <select class="form-control" id="ciudad_destino">
+                                    <select class="form-control" id="ciudad_destino" name="iddestino">
                                         <ul>
                                             @foreach($cities as $city)
                                             <option value="{{ $city-> id }}">{{ $city-> nombre }}</option>
@@ -56,7 +56,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <label> CITY </label> <!-- ciudad origen-->
-                                    <select id="ciudad_origen" class="form-control">
+                                    <select id="ciudad_origen" class="form-control" name="idciudad">
                                         @foreach($cities as $city)
                                             <option value="{{ $city-> id }}">{{ $city-> nombre }}</option>
                                         @endforeach
